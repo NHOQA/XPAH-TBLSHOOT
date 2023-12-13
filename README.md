@@ -3,6 +3,8 @@ TD-XPAH troubleshooting notes
 
 Commands used
  - sudo systemctl stop NetworkManager #stop network manager, will come back after reboot
+ - sudo apt-get install-y batctl
+ - sudo modprobe batman-adv
  - iwlist wlan1 scan   #scans
  - sudo ip addr # if showing <no-carrier>, then not connected
  - sudo iw wlan1 info  #check that is mesh mode and not managed
