@@ -35,3 +35,6 @@ What does the join command show now.
   - Make sure wpa_supplicant is stopped, "sudo systemctl stop wpa_supplicant" and also "sudo killall wpa_supplicant".
   - That flag will disappear when they connect. Try running "sudo iw reg set US" and "iw wlan1 set channel 36" to make sure we have the same region and channel.
   - The AP is controlled by hostapd while the wlan1 mesh interface is controlled by wpa_supplicant. When Raspbian recently changed to systemd for network devices  it meant the older, simpler /etc/network/interfaces method doesn't work. As many folks have discovered, systemd-networkd is tricky and timing issues between the kernel state machine, wpa_supplicant, and hostapd can be difficult to trace and fix
+
+12-13-23 notes
+
