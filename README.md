@@ -37,4 +37,31 @@ What does the join command show now.
   - The AP is controlled by hostapd while the wlan1 mesh interface is controlled by wpa_supplicant. When Raspbian recently changed to systemd for network devices  it meant the older, simpler /etc/network/interfaces method doesn't work. As many folks have discovered, systemd-networkd is tricky and timing issues between the kernel state machine, wpa_supplicant, and hostapd can be difficult to trace and fix
 
 12-13-23 notes
+best script so far
+#!/bin/bash
+
+systemctl stop wpa_supplicant
+systemctl stop NetworkManager
+
+
+
+
+INTERFACE=wlan1
+PHY=nrc80211
+
+MESH_NAME=testmesh
+MY_IP=10.1.100.10/24
+
+iw dev $INTERFACE del
+iw dev mesh0 del
+iw phy $PHY interface add $INTERFACE type mesh
+ip link set mtu 1532 dev $INTERFACE
+iw dev $INTERFACE interface add mesh0 type mp mesh_id $MESH_NAME
+# iw dev mesh0 set channel 4
+iw dev mesh0 set channel 36
+ip link set mesh0 up
+ip addr add $MY_IP dev mesh0
+
+batctl if add $INTERFACE
+ip link set up dev bat0
 
