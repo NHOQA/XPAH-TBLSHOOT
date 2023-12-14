@@ -9,6 +9,7 @@ Commands used
  - iw list|less
  - iw phy|less
  - history
+ - sudo -i # makes you permanently root
  - sudo ip addr # if showing <no-carrier>, then not connected
  - sudo iw wlan1 info  #check that is mesh mode and not managed
  - sudo iw wlan1 mesh_param dump   #shows mesh parameters
