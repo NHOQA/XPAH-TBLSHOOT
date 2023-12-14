@@ -6,6 +6,9 @@ Commands used
  - sudo apt-get install-y batctl
  - sudo modprobe batman-adv
  - iwlist wlan1 scan   #scans
+ - iw list|less
+ - iw phy|less
+ - history
  - sudo ip addr # if showing <no-carrier>, then not connected
  - sudo iw wlan1 info  #check that is mesh mode and not managed
  - sudo iw wlan1 mesh_param dump   #shows mesh parameters
