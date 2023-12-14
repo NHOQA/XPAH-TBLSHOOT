@@ -48,7 +48,6 @@ systemctl stop NetworkManager
 
 INTERFACE=wlan1
 PHY=nrc80211
-
 MESH_NAME=testmesh
 MY_IP=10.1.100.10/24
 
