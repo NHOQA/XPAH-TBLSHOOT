@@ -6,6 +6,8 @@ Commands used
  - sudo apt-get install-y batctl
  - sudo modprobe batman-adv
  - iwlist wlan1 scan   #scans
+ - iw dev wlan1 link
+ - ip link set up dev wlan1
  - iw list|less
  - iw phy|less
  - history
