@@ -10,6 +10,7 @@ Commands used
  - ip link set up dev wlan1
  - iw list|less
  - iw phy|less
+ - iw wlan1 set type mesh
  - history
  - iwconfig , ifconfig , iw dev ,
  - batctl if #check if active 
